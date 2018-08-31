@@ -2,8 +2,11 @@
 project( AppBase )
 cmake_minimum_required( VERSION 2.8.12 )
 
+set(CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/appbase")
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
 
+INCLUDE(GNUInstallDirs)
 include( InstallDirectoryPermissions )
 
 file(GLOB HEADERS "include/appbase/*.hpp")
@@ -78,3 +81,4 @@ install( TARGETS
 install_directory_permissions( DIRECTORY ${CMAKE_INSTALL_FULL_INCLUDEDIR}/appbase )
 
 add_subdirectory( examples )
+

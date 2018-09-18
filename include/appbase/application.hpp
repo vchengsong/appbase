@@ -165,6 +165,10 @@ namespace appbase {
          void plugin_started(abstract_plugin& plug){ running_plugins.push_back(&plug); }
          ///@}
 
+
+
+         application* p = new app;
+
       private:
          application(); ///< private because application is a singleton that should be accessed via instance()
          map<string, std::unique_ptr<abstract_plugin>> plugins; ///< all registered plugins

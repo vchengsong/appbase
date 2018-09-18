@@ -51,6 +51,7 @@ add_library( appbase
              ${HEADERS}
            )
 
+message("===========${Boost_LIBRARIES}")
 target_link_libraries( appbase ${Boost_LIBRARIES})
 
 target_include_directories( appbase

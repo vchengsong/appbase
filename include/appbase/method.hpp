@@ -161,7 +161,7 @@ namespace appbase {
       };
 
       template<typename ...Args, typename DispatchPolicy>
-      class method_caller<void(Args...), DispatchPolicy> {
+      class sigmethod_caller<void(Args...), DispatchPolicy> {
          public:
             using signal_type = boost::signals2::signal<void(Args...), DispatchPolicy>;
             using result_type = void;
